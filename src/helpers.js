@@ -4,12 +4,11 @@ export const calcTime = (time) => {
   const mins = time % 60;
   return `${hours}h ${mins}m`;
 }
-
-// Convert a number to $ format
+// Convert a number to money formatting
 export const convertMoney = (money) => {
-  var formatter = new Intl.NumberFormat('en-IN', {
+  var formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'INR',
+    currency: 'USD',
     minimumFractionDigits: 0,
   });
   return formatter.format(money);
